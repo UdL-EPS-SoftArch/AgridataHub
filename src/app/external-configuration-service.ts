@@ -25,12 +25,12 @@ export class ExternalConfigurationService implements ExternalConfigurationHandle
     return null;
   }
 
-  setExternalConfiguration(externalConfiguration: ExternalConfiguration) {
+  setExternalConfiguration(externalConfiguration: ExternalConfiguration): void {
   }
 
-  serialize() {
+  serialize(): void {
   }
 
-  deserialize() {
+  deserialize(): void {
   }
 }

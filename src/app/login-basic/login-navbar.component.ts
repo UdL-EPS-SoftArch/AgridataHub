@@ -12,7 +12,7 @@ export class LoginNavbarComponent implements OnInit {
 
   constructor(private authenticationService: AuthenticationBasicService, private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit(): void {}
 
   getCurrentUser(): User {
     return this.authenticationService.getCurrentUser();

@@ -31,11 +31,11 @@ export class ErrorAlertComponent implements OnInit {
       });
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.closed = true;
   }
 
-  onClose() {
+  onClose(): void {
     this.closed = true;
     clearTimeout(this.timerId);
   }

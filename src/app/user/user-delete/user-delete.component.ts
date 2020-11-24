@@ -18,13 +18,13 @@ export class UserDeleteComponent implements OnInit {
               private authenticationService: AuthenticationBasicService) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
     this.userService.get(this.id).subscribe(
       user => this.user = user);
   }
 
-  delete() {
+  delete(): void {
     this.userService.delete(this.user).subscribe(
       () => {
         this.authenticationService.logout();
