@@ -29,7 +29,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "allowedCommonJsDependencies": ["uri-templates", "hash.js"]
+            "allowedCommonJsDependencies": ["uri-templates", "hash.js", "url"]
           },
           "configurations": {
             "production": {
