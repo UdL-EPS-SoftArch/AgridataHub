@@ -10,6 +10,14 @@
       <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">
         <a class="nav-link" [routerLink]="['/about']">About</a>
       </li>
+      <li class="nav-item" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="datasetDropdown" role="button"
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Datasets</a>
+        <div class="dropdown-menu" aria-labelledby="datasetDropdown" ngbDropdownMenu>
+          <a *ngIf="isLogged()" class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/datasets/create']"><span class="far fa-plus-square"></span> Create</a>
+        </div>
+      </li>
       <li class="nav-item" *ngIf="isLogged()" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="playerDropdown" role="button"
            aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Users</a>

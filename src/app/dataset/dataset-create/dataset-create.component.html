@@ -1,0 +1,33 @@
+<!-- Success alert -->
+<p *ngIf="successAlert">
+  <ngb-alert [type]="'success'" (closed)="closeAlert()">Dataset successfully created.</ngb-alert>
+</p>
+
+<h4 class="display-4">Create a dataset</h4>
+<p class="lead">Let's create a new dataset now !</p>
+<form id="user-form" (ngSubmit)="onSubmit()" #form="ngForm">
+  <fieldset>
+
+    <!-- Dataset title -->
+    <div class="form-group">
+      <label class="control-label" for="title">Title*</label>
+      <input id="title" name="title" type="text" class="form-control" required
+             [(ngModel)]="dataset.title">
+      <div class="invalid-feedback">A title is required</div>
+    </div>
+
+    <!-- Dataset description -->
+    <div class="form-group">
+      <label class="control-label" for="description">Description</label>
+      <input id="description" name="description" type="text" class="form-control"
+             [(ngModel)]="dataset.description">
+    </div>
+
+    <!-- Button -->
+    <div class="form-group">
+      <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [disabled]="!form.form.valid">Submit</button>
+      <button id="listBtn" type="button" (click)="onCancel()" class="btn m-1 btn-outline-primary pull-right">Back</button>
+    </div>
+
+  </fieldset>
+</form>
