@@ -25,6 +25,7 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
 import { DatasetCreateComponent } from './dataset/dataset-create/dataset-create.component';
+import {RequestCreateComponent} from './request/request-create/request-create.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { DatasetCreateComponent } from './dataset/dataset-create/dataset-create.
     UserDeleteComponent,
     UserSearchComponent,
     DatasetCreateComponent,
+    RequestCreateComponent,
   ],
   imports: [
     BrowserModule,

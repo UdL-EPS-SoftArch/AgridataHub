@@ -9,6 +9,9 @@ import { UserRegisterComponent } from './user/user-register/user-register.compon
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import {DatasetCreateComponent} from './dataset/dataset-create/dataset-create.component';
+import {RequestListComponent} from './request/request-list/request-list.component';
+import {RequestCreateComponent} from './request/request-create/request-create.component';
+
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -20,7 +23,9 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},
-];
+  { path: 'requests', component: RequestListComponent},
+  { path: 'requests/create', component: RequestCreateComponent},
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
