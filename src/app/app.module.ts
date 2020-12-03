@@ -26,6 +26,7 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
 import { DatasetCreateComponent } from './dataset/dataset-create/dataset-create.component';
+import { DatasetListComponent } from './dataset/dataset-list/dataset-list.component';
 import {ProviderRegisterComponent} from './provider/provider-register/provider-register.component';
 import {ReuserRegisterComponent} from './reuser/reuser-register/reuser-register.component';
 
@@ -41,6 +42,7 @@ import {ReuserRegisterComponent} from './reuser/reuser-register/reuser-register.
     UserDeleteComponent,
     UserSearchComponent,
     DatasetCreateComponent,
+    DatasetListComponent,
   ],
   imports: [
     BrowserModule,

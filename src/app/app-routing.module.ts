@@ -8,6 +8,7 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import {DatasetCreateComponent} from './dataset/dataset-create/dataset-create.component';
+import {DatasetListComponent} from './dataset/dataset-list/dataset-list.component';
 import {ProviderRegisterComponent} from './provider/provider-register/provider-register.component';
 import {ReuserRegisterComponent} from './reuser/reuser-register/reuser-register.component';
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'users/:id', component: UserDetailComponent, canActivate: [LoggedInGuard]},
   { path: 'users', component: UserListComponent, canActivate: [LoggedInGuard]},
   { path: 'datasets/create', component: DatasetCreateComponent},
+  { path: 'datasets', component: DatasetListComponent},
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},
