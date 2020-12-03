@@ -1,11 +1,17 @@
 <form id="user-form" (ngSubmit)="onSubmit()" #form="ngForm">
   <fieldset>
 
+    <!-- Type User -->
+    <div class="form-group">
+    <p>You are being registred as a Reuser</p>
+    <button id="UserRegisterBtn" type="button" [routerLink]="['/providers/create']" class="btn m-1 btn-outline-primary">Register as a Provider</button>
+    </div>
+
     <!-- Username input -->
     <div class="form-group" [class.was-validated]="username.dirty || username.touched">
       <label class="control-label" for="username">Username*</label>
       <input id="username" name="username" type="text" class="form-control" required
-             [(ngModel)]="user.id" #username="ngModel">
+             [(ngModel)]="reuser.id" #username="ngModel">
       <div class="invalid-feedback">A username is required</div>
     </div>
 
@@ -13,7 +19,7 @@
     <div class="form-group" [class.was-validated]="email.dirty || email.touched">
       <label class="control-label" for="username">E-Mail*</label>
       <input id="email" name="email" type="email" class="form-control" required
-             [(ngModel)]="user.email" #email="ngModel">
+             [(ngModel)]="reuser.email" #email="ngModel">
       <div class="invalid-feedback">An e-mail is required</div>
     </div>
 
@@ -21,7 +27,7 @@
     <div class="form-group" [class.was-validated]="password.dirty || password.touched">
       <label class="control-label" for="password">Password*</label>
       <input id="password" name="password" type="password" class="form-control" required minlength="8" maxlength="256"
-             [(ngModel)]="user.password" #password="ngModel">
+             [(ngModel)]="reuser.password" #password="ngModel">
       <div class="invalid-feedback">A password longer than 8 characters is required</div>
     </div>
 
