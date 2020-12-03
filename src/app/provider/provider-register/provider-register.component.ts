@@ -27,7 +27,7 @@ export class ProviderRegisterComponent implements OnInit {
     this.providerservice.create(this.provider).subscribe(
       (newProvider: Provider) => {
         this.authenticationBasicService.login(newProvider.id, newProvider.password).subscribe(
-          (provider: Provider) => this.router.navigate(['providers', provider.id]));
+          (provider: Provider) => this.router.navigate(['']));
       });
   }
 

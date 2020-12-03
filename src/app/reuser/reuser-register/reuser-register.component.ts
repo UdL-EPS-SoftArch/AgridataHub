@@ -27,7 +27,7 @@ export class ReuserRegisterComponent implements OnInit {
     this.reuserservice.create(this.reuser).subscribe(
       (newReuser: Reuser) => {
         this.authenticationBasicService.login(newReuser.id, newReuser.password).subscribe(
-          (reuser: Reuser) => this.router.navigate(['reusers', reuser.id]));
+          (reuser: Reuser) => this.router.navigate(['']));
       });
   }
 
