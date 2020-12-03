@@ -1,8 +1,3 @@
-<!-- Success alert -->
-<p *ngIf="successAlert">
-  <ngb-alert [type]="'success'" (closed)="closeAlert()">Dataset successfully created.</ngb-alert>
-</p>
-
 <h4 class="display-4">Create a dataset</h4>
 <p class="lead">Let's create a new dataset now !</p>
 <form id="user-form" (ngSubmit)="onSubmit()" #form="ngForm">
