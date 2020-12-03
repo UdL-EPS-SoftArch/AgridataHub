@@ -1,0 +1,19 @@
+<h4 class="display-4" xmlns:slice="http://www.w3.org/1999/xhtml" xmlns:slice="http://www.w3.org/1999/xhtml">Datasets</h4>
+<p class="lead mb-4">These are all the current available datasets in Agrdata<b>Hub</b>. If you are a Reuser, you will be able
+  to request one.</p>
+<div class="row">
+  <div class="col-md-6 col-lg-4 mb-3" *ngFor="let dataset of datasets">
+    <div class="card bg-light mb-3 mx-auto">
+      <div class="card-header font-weight-bold"><span class="far fa-file mr-1"></span> {{dataset.title}}</div>
+      <div class="card-body">
+        <p class="card-text text-justify">{{dataset.description}}</p>
+      </div>
+      <button id="details-button" type="button" class="btn btn-sm btn-info w-25 ml-auto mr-3">Details</button>
+      <p class="card-text text-muted m-3">{{dataset.createdAt | date:'short'}}</p>
+    </div>
+  </div>
+</div>
+
+<ngb-pagination class="d-flex justify-content-center"
+                [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalDatasets"
+                (pageChange)="changePage()"></ngb-pagination>
