@@ -26,6 +26,11 @@ import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
 import { DatasetCreateComponent } from './dataset/dataset-create/dataset-create.component';
 import {RequestCreateComponent} from './request/request-create/request-create.component';
+import {RequestListComponent} from './request/request-list/request-list.component';
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+
+registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
@@ -39,6 +44,7 @@ import {RequestCreateComponent} from './request/request-create/request-create.co
     UserSearchComponent,
     DatasetCreateComponent,
     RequestCreateComponent,
+    RequestListComponent
   ],
   imports: [
     BrowserModule,
