@@ -18,11 +18,19 @@
              [(ngModel)]="dataset.description">
     </div>
 
+    <!-- Dataset description -->
+    <div class="form-group">
+      <label class="control-label" for="content">CSV</label>
+      <input id="content" name="content" type="text" class="form-control"
+             [(ngModel)]="dataset.content">
+    </div>
+
     <!-- Button -->
     <div class="form-group">
       <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [disabled]="!form.form.valid">Submit</button>
       <button id="listBtn" type="button" (click)="onCancel()" class="btn m-1 btn-outline-primary pull-right">Back</button>
     </div>
+
 
   </fieldset>
 </form>
