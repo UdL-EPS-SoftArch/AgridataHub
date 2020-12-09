@@ -18,11 +18,18 @@
              [(ngModel)]="dataset.description">
     </div>
 
-    <!-- Dataset description -->
+    <!-- Dataset content -->
     <div class="form-group">
       <label class="control-label" for="content">CSV</label>
       <input id="content" name="content" type="text" class="form-control"
              [(ngModel)]="dataset.content">
+    </div>
+
+    <!-- Dataset separador -->
+    <div class="form-group">
+      <label class="control-label" for="contentType">Separador</label>
+      <input id="contentType" name="contentType" type="text" class="form-control"
+             [(ngModel)]="dataset.contentType">
     </div>
 
     <!-- Button -->

@@ -6,6 +6,7 @@ export class Dataset extends Resource {
   description: string;
   content: string;
   createdAt: Date;
+  contentType: string;
 
   uri: string;
 
