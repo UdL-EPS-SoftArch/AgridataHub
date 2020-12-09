@@ -126,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "agridata-hub"
+    }
+  },
+  "defaultProject": "agridata-hub",
+  "cli": {
+    "analytics": false
+  }
 }
