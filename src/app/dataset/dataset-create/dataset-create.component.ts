@@ -12,7 +12,6 @@ import {DatasetService} from '../dataset.service';
 })
 export class DatasetCreateComponent implements OnInit {
   public dataset: Dataset;
-  public successAlert: boolean;
 
   constructor(private router: Router,
               private location: Location,
@@ -26,17 +25,12 @@ export class DatasetCreateComponent implements OnInit {
   onSubmit(): void {
     this.datasetService.create(this.dataset).subscribe(
       (newDataset: Dataset) => {
-        this.router.navigate(['/datasets/create']);
-        this.successAlert = true;
+        this.router.navigate(['/datasets/']);
       }
     );
   }
 
   onCancel(): void {
     this.location.back();
-  }
-
-  closeAlert(): void {
-    this.successAlert = false;
   }
 }

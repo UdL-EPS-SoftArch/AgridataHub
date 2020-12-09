@@ -14,6 +14,8 @@
         <a class="nav-link dropdown-toggle" id="datasetDropdown" role="button"
            aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Datasets</a>
         <div class="dropdown-menu" aria-labelledby="datasetDropdown" ngbDropdownMenu>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/datasets']"><span class="fas fa-list"></span> List</a>
           <a *ngIf="isLogged()" class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/datasets/create']"><span class="far fa-plus-square"></span> Create</a>
         </div>
