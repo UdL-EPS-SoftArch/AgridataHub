@@ -29,6 +29,12 @@ import { DatasetCreateComponent } from './dataset/dataset-create/dataset-create.
 import { DatasetListComponent } from './dataset/dataset-list/dataset-list.component';
 import {ProviderRegisterComponent} from './provider/provider-register/provider-register.component';
 import {ReuserRegisterComponent} from './reuser/reuser-register/reuser-register.component';
+import {RequestCreateComponent} from './request/request-create/request-create.component';
+import {RequestListComponent} from './request/request-list/request-list.component';
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+
+registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
@@ -43,6 +49,8 @@ import {ReuserRegisterComponent} from './reuser/reuser-register/reuser-register.
     UserSearchComponent,
     DatasetCreateComponent,
     DatasetListComponent,
+    RequestCreateComponent,
+    RequestListComponent
   ],
   imports: [
     BrowserModule,

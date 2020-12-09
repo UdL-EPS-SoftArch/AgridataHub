@@ -11,6 +11,10 @@ import {DatasetCreateComponent} from './dataset/dataset-create/dataset-create.co
 import {DatasetListComponent} from './dataset/dataset-list/dataset-list.component';
 import {ProviderRegisterComponent} from './provider/provider-register/provider-register.component';
 import {ReuserRegisterComponent} from './reuser/reuser-register/reuser-register.component';
+import {RequestListComponent} from './request/request-list/request-list.component';
+import {RequestCreateComponent} from './request/request-create/request-create.component';
+import {RequestDetailComponent} from './request/request-detail/request-detail.component';
+
 
 const routes: Routes = [
   { path: 'reusers/create', component: ReuserRegisterComponent},
@@ -24,7 +28,10 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},
-];
+  { path: 'requests', component: RequestListComponent},
+  { path: 'requests/create', component: RequestCreateComponent},
+  { path: 'requests/:id', component: RequestDetailComponent},
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
