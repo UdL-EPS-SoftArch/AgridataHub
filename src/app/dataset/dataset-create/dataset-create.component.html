@@ -20,9 +20,11 @@
 
     <!-- Dataset content -->
     <div class="form-group">
-      <label class="control-label" for="content">CSV</label>
-      <input id="content" name="content" type="text" class="form-control"
-             [(ngModel)]="dataset.content">
+      <label class="control-label" for="inputFile">CSV</label>
+      <div class="col-md-9">
+        <input type="file" id="inputFile" autofocus="" (change)="addDataFile($event)" #file/>
+      </div>
+
     </div>
 
     <!-- Dataset separador -->
