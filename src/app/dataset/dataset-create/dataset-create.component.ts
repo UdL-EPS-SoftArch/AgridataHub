@@ -12,9 +12,6 @@ import {DatasetService} from '../dataset.service';
 })
 export class DatasetCreateComponent implements OnInit {
   public dataset: Dataset;
-  public fileAttached = false;
-  public content: string;
-  public filename: string;
 
   constructor(private router: Router,
               private location: Location,
@@ -31,9 +28,7 @@ export class DatasetCreateComponent implements OnInit {
     const reader = new FileReader();
     reader.readAsText(FileToUpload);
     reader.onloadend = (e) => {
-      this.fileAttached = true;
       this.dataset.content = reader.result;
-      this.filename = FileToUpload.name;
     };
   }
   onSubmit(): void {
