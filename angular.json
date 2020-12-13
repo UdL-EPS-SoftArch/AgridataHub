@@ -28,7 +28,7 @@
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": ["src/typeFilter.js"],
             "allowedCommonJsDependencies": [
               "uri-templates",
               "hash.js",
