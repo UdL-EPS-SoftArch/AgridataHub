@@ -130,6 +130,6 @@
   },
   "defaultProject": "agridata-hub",
   "cli": {
-    "analytics": "cc102654-6884-4f08-b45e-e81b98b6c10f"
+    "analytics": false
   }
 }
