@@ -22,18 +22,21 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
-import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
 import { DatasetCreateComponent } from './dataset/dataset-create/dataset-create.component';
 import { DatasetListComponent } from './dataset/dataset-list/dataset-list.component';
-import {ProviderRegisterComponent} from './provider/provider-register/provider-register.component';
-import {ProviderListComponent} from './provider/provider-list/provider.list.component';
-import {ReuserRegisterComponent} from './reuser/reuser-register/reuser-register.component';
-import {ReuserListComponent} from './reuser/reuser-list/reuser-list.component';
+import { ProviderRegisterComponent } from './provider/provider-register/provider-register.component';
+import { ProviderListComponent } from './provider/provider-list/provider.list.component';
+import { ProviderDeleteComponent } from './provider/provider-delete/provider-delete.component';
+import { ReuserRegisterComponent } from './reuser/reuser-register/reuser-register.component';
+import { ReuserListComponent } from './reuser/reuser-list/reuser-list.component';
+import { ReuserDeleteComponent } from './reuser/reuser-delete/reuser-delete.component';
 import {RequestCreateComponent} from './request/request-create/request-create.component';
 import {RequestListComponent} from './request/request-list/request-list.component';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+
+
 
 
 
@@ -46,10 +49,11 @@ registerLocaleData(localeEs);
     UserDetailComponent,
     ReuserRegisterComponent,
     ReuserListComponent,
+    ReuserDeleteComponent,
     ProviderRegisterComponent,
     ProviderListComponent,
+    ProviderDeleteComponent,
     UserEditComponent,
-    UserDeleteComponent,
     UserSearchComponent,
     DatasetCreateComponent,
     DatasetListComponent,
