@@ -1,1 +1,22 @@
-<p>request-detail works!</p>
+<div class="card mb-1">
+  <div class="card-block">
+    <h4 class="card-title col-md-6 p-2">Request Detail</h4>
+    <div class="card-body row m-1">
+      <div class="col-md-6 p-3">
+        <h6 class="card-text"><b>Description of request:</b> {{request.description}}</h6>
+        <h6 class="card-text"><b>Creation date:</b> {{request.creationDate}}</h6>
+      </div>
+    </div>
+    <div class="card-footer text-right">
+      <button id="listBtn" type="button" [routerLink]="['/requests']"
+              class="btn m-1 btn-outline-primary">Return to list
+      </button>
+      <button id="editBtn" type="button" [routerLink]="['edit']"
+              class="btn m-1 btn-outline-success">Edit
+      </button>
+      <button id="deleteBtn" type="button" [routerLink]="['delete']"
+              class="btn m-1 btn-outline-danger">Delete
+      </button>
+    </div>
+  </div>
+</div>
