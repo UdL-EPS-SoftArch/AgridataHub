@@ -34,6 +34,7 @@ import {RequestCreateComponent} from './request/request-create/request-create.co
 import {RequestListComponent} from './request/request-list/request-list.component';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+import {RequestDetailComponent} from './request/request-detail/request-detail.component';
 
 
 
@@ -54,7 +55,8 @@ registerLocaleData(localeEs);
     DatasetCreateComponent,
     DatasetListComponent,
     RequestCreateComponent,
-    RequestListComponent
+    RequestListComponent,
+    RequestDetailComponent,
   ],
   imports: [
     BrowserModule,
