@@ -20,7 +20,6 @@ import {ProviderService} from './provider/provider.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
 import { DatasetCreateComponent } from './dataset/dataset-create/dataset-create.component';
@@ -48,7 +47,6 @@ registerLocaleData(localeEs);
   declarations: [
     AppComponent,
     NavbarComponent,
-    UserDetailComponent,
     ReuserRegisterComponent,
     ReuserListComponent,
     ReuserDeleteComponent,
