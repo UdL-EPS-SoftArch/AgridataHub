@@ -31,10 +31,12 @@ import { ProviderDeleteComponent } from './provider/provider-delete/provider-del
 import { ReuserRegisterComponent } from './reuser/reuser-register/reuser-register.component';
 import { ReuserListComponent } from './reuser/reuser-list/reuser-list.component';
 import { ReuserDeleteComponent } from './reuser/reuser-delete/reuser-delete.component';
+import { ReuserDetailComponent } from './reuser/reuser-detail/reuser-detail.component';
 import {RequestCreateComponent} from './request/request-create/request-create.component';
 import {RequestListComponent} from './request/request-list/request-list.component';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+
 
 
 
@@ -50,6 +52,7 @@ registerLocaleData(localeEs);
     ReuserRegisterComponent,
     ReuserListComponent,
     ReuserDeleteComponent,
+    ReuserDetailComponent,
     ProviderRegisterComponent,
     ProviderListComponent,
     ProviderDeleteComponent,

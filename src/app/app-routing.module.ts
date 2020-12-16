@@ -14,8 +14,10 @@ import {ReuserRegisterComponent} from './reuser/reuser-register/reuser-register.
 import {ReuserListComponent} from './reuser/reuser-list/reuser-list.component';
 import {RequestListComponent} from './request/request-list/request-list.component';
 import {ReuserDeleteComponent} from './reuser/reuser-delete/reuser-delete.component';
+import {ReuserDetailComponent} from './reuser/reuser-detail/reuser-detail.component';
 import {RequestCreateComponent} from './request/request-create/request-create.component';
 import {RequestDetailComponent} from './request/request-detail/request-detail.component';
+
 
 
 
@@ -26,6 +28,7 @@ const routes: Routes = [
   { path: 'reusers/create', component: ReuserRegisterComponent},
   { path: 'reusers', component: ReuserListComponent, canActivate: [LoggedInGuard]},
   { path: 'reusers/:id/delete', component: ReuserDeleteComponent, canActivate: [LoggedInGuard]},
+  { path: 'reusers/:id', component: ReuserDetailComponent, canActivate: [LoggedInGuard]},
   { path: 'providers/create', component: ProviderRegisterComponent},
   { path: 'providers', component: ProviderListComponent, canActivate: [LoggedInGuard]},
   { path: 'providers/:id/delete', component: ProviderDeleteComponent, canActivate: [LoggedInGuard]},
