@@ -18,7 +18,7 @@ export class RequestDeleteComponent implements OnInit {
     this.requestSerice.get(this.id).subscribe(
       request => this.request = request);
   }
-  delete() {
+  delete(): void {
     this.requestSerice.delete(this.request).subscribe(
       () => {
         this.router.navigate(['requests']);
