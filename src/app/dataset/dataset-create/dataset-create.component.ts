@@ -11,6 +11,7 @@ import {Provider} from "../../provider/provider";
   templateUrl: './dataset-create.component.html',
   styleUrls: ['./dataset-create.component.css']
 })
+
 export class DatasetCreateComponent implements OnInit {
   public dataset: Dataset;
 
@@ -20,6 +21,17 @@ export class DatasetCreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataset = new Dataset();
+  }
+  addDataFile(event): void {
+    const fileList: FileList = event.target.files;
+    const FileToUpload: File = fileList[0];
+    const reader = new FileReader();
+    reader.readAsText(FileToUpload);
+    reader.onloadend = (e) => {
+      this.dataset.content = reader.result;
+      this.dataset.contentType = FileToUpload.type;
+    };
+
   }
 
   onSubmit(): void {

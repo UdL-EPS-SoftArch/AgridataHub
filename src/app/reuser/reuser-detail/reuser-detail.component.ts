@@ -1,30 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { UserService } from '../user.service';
-import { User } from '../../login-basic/user';
+import { ReuserService } from '../reuser.service';
+import { Reuser } from '../reuser';
 import { AuthenticationBasicService } from '../../login-basic/authentication-basic.service';
 
+
+
 @Component({
-  selector: 'app-user-detail',
-  templateUrl: './user-detail.component.html'
+  selector: 'app-reuser-detail',
+  templateUrl: './reuser-detail.component.html'
 })
-export class UserDetailComponent implements OnInit {
-  public user: User = new User();
+export class ReuserDetailComponent implements OnInit {
+  public reuser: Reuser = new Reuser();
 
   constructor(private route: ActivatedRoute,
-              private userService: UserService,
+              private reuserService: ReuserService,
               private authenticationService: AuthenticationBasicService) {
   }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.userService.get(id).subscribe(
-      user => {
-        this.user = user;
+    this.reuserService.get(id).subscribe(
+      reuser => {
+        this.reuser = reuser;
       });
   }
 
-  getCurrentUser(): User {
+  getCurrentUser(): Reuser {
     return this.authenticationService.getCurrentUser();
   }
 }
