@@ -11,6 +11,7 @@ import {DatasetCreateComponent} from './dataset/dataset-create/dataset-create.co
 import {DatasetListComponent} from './dataset/dataset-list/dataset-list.component';
 import {ProviderRegisterComponent} from './provider/provider-register/provider-register.component';
 import {ReuserRegisterComponent} from './reuser/reuser-register/reuser-register.component';
+import {DatasetDetailsComponent} from './dataset/dataset-details/dataset-details.component';
 
 const routes: Routes = [
   { path: 'reusers/create', component: ReuserRegisterComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'users/:id', component: UserDetailComponent, canActivate: [LoggedInGuard]},
   { path: 'users', component: UserListComponent, canActivate: [LoggedInGuard]},
   { path: 'datasets/create', component: DatasetCreateComponent},
+  { path: 'datasets/:id', component: DatasetDetailsComponent},
   { path: 'datasets', component: DatasetListComponent},
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},

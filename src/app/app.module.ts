@@ -29,6 +29,7 @@ import { DatasetCreateComponent } from './dataset/dataset-create/dataset-create.
 import { DatasetListComponent } from './dataset/dataset-list/dataset-list.component';
 import {ProviderRegisterComponent} from './provider/provider-register/provider-register.component';
 import {ReuserRegisterComponent} from './reuser/reuser-register/reuser-register.component';
+import { DatasetDetailsComponent } from './dataset/dataset-details/dataset-details.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {ReuserRegisterComponent} from './reuser/reuser-register/reuser-register.
     UserSearchComponent,
     DatasetCreateComponent,
     DatasetListComponent,
+    DatasetDetailsComponent,
   ],
   imports: [
     BrowserModule,

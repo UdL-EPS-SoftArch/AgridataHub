@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {AuthenticationBasicService} from '../../login-basic/authentication-basic.service';
 import {DatasetService} from '../dataset.service';
+import {Provider} from "../../provider/provider";
 
 @Component({
   selector: 'app-dataset-create',
@@ -15,8 +16,7 @@ export class DatasetCreateComponent implements OnInit {
 
   constructor(private router: Router,
               private location: Location,
-              private datasetService: DatasetService,
-              private authenticationBasicService: AuthenticationBasicService) { }
+              private datasetService: DatasetService) { }
 
   ngOnInit(): void {
     this.dataset = new Dataset();
