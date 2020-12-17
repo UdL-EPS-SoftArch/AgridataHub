@@ -38,11 +38,7 @@ import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 import {RequestDetailComponent} from './request/request-detail/request-detail.component';
 import {RequestDeleteComponent} from './request/request-delete/request-delete.component';
-
-
-
-
-
+import { DatasetDetailsComponent } from './dataset/dataset-details/dataset-details.component';
 
 
 registerLocaleData(localeEs);
@@ -63,6 +59,7 @@ registerLocaleData(localeEs);
     UserSearchComponent,
     DatasetCreateComponent,
     DatasetListComponent,
+    DatasetDetailsComponent,
     RequestCreateComponent,
     RequestListComponent,
     RequestDetailComponent,

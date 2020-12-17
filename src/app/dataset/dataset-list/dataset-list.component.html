@@ -2,14 +2,18 @@
 <p class="lead mb-4">These are all the current available datasets in Agrdata<b>Hub</b>. If you are a Reuser, you will be able
   to request one.</p>
 <div class="row">
-  <div class="col-md-6 col-lg-4 mb-3" *ngFor="let dataset of datasets">
+  <div class="col-md-6 col-lg-4 mb-3" *ngFor="let dataset of datasets;">
     <div class="card bg-light mb-3 mx-auto">
-      <div class="card-header font-weight-bold"><span class="far fa-file mr-1"></span> {{dataset.title}}</div>
+      <div class="card-header font-weight-bold">
+        <span class="far fa-file mr-1"></span> {{dataset.title}}
+      </div>
       <div class="card-body">
         <p class="card-text text-justify">{{dataset.description}}</p>
       </div>
-      <button id="details-button" type="button" class="btn btn-sm btn-info w-25 ml-auto mr-3">Details</button>
-      <p class="card-text text-muted m-3">{{dataset.createdAt | date:'short'}}</p>
+
+      <a *ngIf="authenticationBasicService.getCurrentUser().id == dataset.providedBy; else disabledButtonBlock" id="details-button" role="button" [routerLink]="['/datasets', dataset.id]" class="btn btn-sm btn-info w-25 ml-auto mr-3">Details</a>
+      <ng-template #disabledButtonBlock><a class="btn btn-sm btn-outline-info w-25 ml-auto mr-3 disabled">Details</a></ng-template>
+      <p class="card-text text-muted m-3 small">Created {{dataset.createdAt | date:'short'}} by <span class="user-link" [routerLink]="['/users', dataset.providedBy]"><u>{{dataset.providedBy}}</u></span></p>
     </div>
   </div>
 </div>

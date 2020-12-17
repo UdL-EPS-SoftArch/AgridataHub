@@ -6,6 +6,7 @@ import { NotFoundComponent } from './error-handler/error-alert/not-found.compone
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import {DatasetCreateComponent} from './dataset/dataset-create/dataset-create.component';
 import {DatasetListComponent} from './dataset/dataset-list/dataset-list.component';
+import {DatasetDetailsComponent} from './dataset/dataset-details/dataset-details.component';
 import {ProviderRegisterComponent} from './provider/provider-register/provider-register.component';
 import {ProviderListComponent} from './provider/provider-list/provider.list.component';
 import {ProviderDeleteComponent} from './provider/provider-delete/provider-delete.component';
@@ -19,13 +20,6 @@ import {RequestCreateComponent} from './request/request-create/request-create.co
 import {RequestDetailComponent} from './request/request-detail/request-detail.component';
 import {RequestDeleteComponent} from './request/request-delete/request-delete.component';
 
-
-
-
-
-
-
-
 const routes: Routes = [
   { path: 'reusers/create', component: ReuserRegisterComponent},
   { path: 'reusers', component: ReuserListComponent, canActivate: [LoggedInGuard]},
@@ -37,6 +31,7 @@ const routes: Routes = [
   { path: 'providers/:id/delete', component: ProviderDeleteComponent, canActivate: [LoggedInGuard]},
   { path: 'users/:id/edit', component: UserEditComponent, canActivate: [LoggedInGuard]},
   { path: 'datasets/create', component: DatasetCreateComponent},
+  { path: 'datasets/:id', component: DatasetDetailsComponent},
   { path: 'datasets', component: DatasetListComponent},
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
