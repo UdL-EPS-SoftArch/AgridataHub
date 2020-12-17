@@ -17,6 +17,7 @@ import {ReuserDeleteComponent} from './reuser/reuser-delete/reuser-delete.compon
 import {ReuserDetailComponent} from './reuser/reuser-detail/reuser-detail.component';
 import {RequestCreateComponent} from './request/request-create/request-create.component';
 import {RequestDetailComponent} from './request/request-detail/request-detail.component';
+import {RequestDeleteComponent} from './request/request-delete/request-delete.component';
 
 
 
@@ -43,6 +44,7 @@ const routes: Routes = [
   { path: 'requests', component: RequestListComponent},
   { path: 'requests/create', component: RequestCreateComponent},
   { path: 'requests/:id', component: RequestDetailComponent},
+  { path: 'requests/:id/delete', component: RequestDeleteComponent},
   ];
 
 @NgModule({
