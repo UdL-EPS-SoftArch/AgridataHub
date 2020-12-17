@@ -12,11 +12,13 @@ import {ProviderDeleteComponent} from './provider/provider-delete/provider-delet
 import {ProviderDetailComponent} from './provider/provider-detail/provider-detail.component';
 import {ReuserRegisterComponent} from './reuser/reuser-register/reuser-register.component';
 import {ReuserListComponent} from './reuser/reuser-list/reuser-list.component';
-import {RequestListComponent} from './request/request-list/request-list.component';
 import {ReuserDeleteComponent} from './reuser/reuser-delete/reuser-delete.component';
 import {ReuserDetailComponent} from './reuser/reuser-detail/reuser-detail.component';
+import {ReuserEditComponent} from './reuser/reuser-edit/reuser-edit.component';
+import {RequestListComponent} from './request/request-list/request-list.component';
 import {RequestCreateComponent} from './request/request-create/request-create.component';
 import {RequestDetailComponent} from './request/request-detail/request-detail.component';
+
 
 
 
@@ -30,6 +32,7 @@ const routes: Routes = [
   { path: 'reusers', component: ReuserListComponent, canActivate: [LoggedInGuard]},
   { path: 'reusers/:id', component: ReuserDetailComponent, canActivate: [LoggedInGuard]},
   { path: 'reusers/:id/delete', component: ReuserDeleteComponent, canActivate: [LoggedInGuard]},
+  { path: 'reusers/:id/edit', component: ReuserEditComponent, canActivate: [LoggedInGuard]},
   { path: 'providers/create', component: ProviderRegisterComponent},
   { path: 'providers', component: ProviderListComponent, canActivate: [LoggedInGuard]},
   { path: 'providers/:id', component: ProviderDetailComponent, canActivate: [LoggedInGuard]},
