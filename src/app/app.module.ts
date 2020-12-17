@@ -36,6 +36,7 @@ import {RequestListComponent} from './request/request-list/request-list.componen
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 import {RequestDetailComponent} from './request/request-detail/request-detail.component';
+import {RequestDeleteComponent} from './request/request-delete/request-delete.component';
 
 
 
@@ -61,6 +62,7 @@ registerLocaleData(localeEs);
     RequestCreateComponent,
     RequestListComponent,
     RequestDetailComponent,
+    RequestDeleteComponent
   ],
   imports: [
     BrowserModule,
