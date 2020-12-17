@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Dataset} from '../dataset';
 import {Router} from '@angular/router';
 import {Location} from '@angular/common';
-import {AuthenticationBasicService} from '../../login-basic/authentication-basic.service';
 import {DatasetService} from '../dataset.service';
-import {Provider} from "../../provider/provider";
 
 @Component({
   selector: 'app-dataset-create',
