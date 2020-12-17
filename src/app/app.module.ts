@@ -27,6 +27,7 @@ import { DatasetListComponent } from './dataset/dataset-list/dataset-list.compon
 import { ProviderRegisterComponent } from './provider/provider-register/provider-register.component';
 import { ProviderListComponent } from './provider/provider-list/provider.list.component';
 import { ProviderDeleteComponent } from './provider/provider-delete/provider-delete.component';
+import { ProviderDetailComponent } from './provider/provider-detail/provider-detail.component';
 import { ReuserRegisterComponent } from './reuser/reuser-register/reuser-register.component';
 import { ReuserListComponent } from './reuser/reuser-list/reuser-list.component';
 import { ReuserDeleteComponent } from './reuser/reuser-delete/reuser-delete.component';
@@ -35,6 +36,7 @@ import {RequestCreateComponent} from './request/request-create/request-create.co
 import {RequestListComponent} from './request/request-list/request-list.component';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+
 
 
 
@@ -54,6 +56,7 @@ registerLocaleData(localeEs);
     ProviderRegisterComponent,
     ProviderListComponent,
     ProviderDeleteComponent,
+    ProviderDetailComponent,
     UserEditComponent,
     UserSearchComponent,
     DatasetCreateComponent,

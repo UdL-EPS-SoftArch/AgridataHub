@@ -9,6 +9,7 @@ import {DatasetListComponent} from './dataset/dataset-list/dataset-list.componen
 import {ProviderRegisterComponent} from './provider/provider-register/provider-register.component';
 import {ProviderListComponent} from './provider/provider-list/provider.list.component';
 import {ProviderDeleteComponent} from './provider/provider-delete/provider-delete.component';
+import {ProviderDetailComponent} from './provider/provider-detail/provider-detail.component';
 import {ReuserRegisterComponent} from './reuser/reuser-register/reuser-register.component';
 import {ReuserListComponent} from './reuser/reuser-list/reuser-list.component';
 import {RequestListComponent} from './request/request-list/request-list.component';
@@ -23,13 +24,15 @@ import {RequestDetailComponent} from './request/request-detail/request-detail.co
 
 
 
+
 const routes: Routes = [
   { path: 'reusers/create', component: ReuserRegisterComponent},
   { path: 'reusers', component: ReuserListComponent, canActivate: [LoggedInGuard]},
-  { path: 'reusers/:id/delete', component: ReuserDeleteComponent, canActivate: [LoggedInGuard]},
   { path: 'reusers/:id', component: ReuserDetailComponent, canActivate: [LoggedInGuard]},
+  { path: 'reusers/:id/delete', component: ReuserDeleteComponent, canActivate: [LoggedInGuard]},
   { path: 'providers/create', component: ProviderRegisterComponent},
   { path: 'providers', component: ProviderListComponent, canActivate: [LoggedInGuard]},
+  { path: 'providers/:id', component: ProviderDetailComponent, canActivate: [LoggedInGuard]},
   { path: 'providers/:id/delete', component: ProviderDeleteComponent, canActivate: [LoggedInGuard]},
   { path: 'users/:id/edit', component: UserEditComponent, canActivate: [LoggedInGuard]},
   { path: 'datasets/create', component: DatasetCreateComponent},
