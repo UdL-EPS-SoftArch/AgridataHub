@@ -5,7 +5,6 @@ import {DatasetService} from '../dataset.service';
 import {AuthenticationBasicService} from '../../login-basic/authentication-basic.service';
 import {Dataset} from '../dataset';
 import {Sort} from '@lagoshny/ngx-hal-client';
-import {Provider} from '../../provider/provider';
 
 @Component({
   selector: 'app-dataset-list',
@@ -37,13 +36,5 @@ export class DatasetListComponent implements OnInit {
       (datasets: Dataset[]) => {
         this.datasets = datasets;
       });
-  }
-
-  private getProvidedByRelations(): void {
-    this.datasets.forEach((dataset: Dataset, index: number) => {
-        dataset.getRelation(Provider, 'providedBy').subscribe(
-          (provider: Provider) => this.datasets[index].providedBy = provider
-        );
-    });
   }
 }

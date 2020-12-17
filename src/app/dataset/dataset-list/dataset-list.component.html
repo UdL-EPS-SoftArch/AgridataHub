@@ -11,9 +11,9 @@
         <p class="card-text text-justify">{{dataset.description}}</p>
       </div>
 
-      <a *ngIf="authenticationBasicService.getCurrentUser().id == dataset.providedBy.id; else disabledButtonBlock" id="details-button" role="button" [routerLink]="['/datasets', dataset.id]" class="btn btn-sm btn-info w-25 ml-auto mr-3">Details</a>
+      <a *ngIf="authenticationBasicService.getCurrentUser().id == dataset.providedBy; else disabledButtonBlock" id="details-button" role="button" [routerLink]="['/datasets', dataset.id]" class="btn btn-sm btn-info w-25 ml-auto mr-3">Details</a>
       <ng-template #disabledButtonBlock><a class="btn btn-sm btn-outline-info w-25 ml-auto mr-3 disabled">Details</a></ng-template>
-      <p class="card-text text-muted m-3 small">Created {{dataset.createdAt | date:'short'}} by <span class="user-link" [routerLink]="['/users', dataset.providedBy.id]"><u>{{dataset.providedBy.id}}</u></span></p>
+      <p class="card-text text-muted m-3 small">Created {{dataset.createdAt | date:'short'}} by <span class="user-link" [routerLink]="['/users', dataset.providedBy]"><u>{{dataset.providedBy}}</u></span></p>
     </div>
   </div>
 </div>
