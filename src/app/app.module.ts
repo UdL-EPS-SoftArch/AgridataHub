@@ -39,6 +39,7 @@ import localeEs from '@angular/common/locales/es';
 import {RequestDetailComponent} from './request/request-detail/request-detail.component';
 import {RequestDeleteComponent} from './request/request-delete/request-delete.component';
 import { DatasetDetailsComponent } from './dataset/dataset-details/dataset-details.component';
+import { DatasetDeleteComponent } from './dataset/dataset-delete/dataset-delete.component';
 
 
 registerLocaleData(localeEs);
@@ -63,7 +64,8 @@ registerLocaleData(localeEs);
     RequestCreateComponent,
     RequestListComponent,
     RequestDetailComponent,
-    RequestDeleteComponent
+    RequestDeleteComponent,
+    DatasetDeleteComponent
   ],
   imports: [
     BrowserModule,
