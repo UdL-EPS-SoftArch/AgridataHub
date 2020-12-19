@@ -20,7 +20,7 @@ import {RequestCreateComponent} from './request/request-create/request-create.co
 import {RequestDetailComponent} from './request/request-detail/request-detail.component';
 import {RequestDeleteComponent} from './request/request-delete/request-delete.component';
 import {DatasetDeleteComponent} from './dataset/dataset-delete/dataset-delete.component';
-import {DatasetModifyComponent} from "./dataset/dataset-modify/dataset-modify.component";
+import {DatasetModifyComponent} from './dataset/dataset-modify/dataset-modify.component';
 
 const routes: Routes = [
   { path: 'reusers/create', component: ReuserRegisterComponent},
