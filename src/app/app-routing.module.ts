@@ -20,6 +20,7 @@ import {RequestCreateComponent} from './request/request-create/request-create.co
 import {RequestDetailComponent} from './request/request-detail/request-detail.component';
 import {RequestDeleteComponent} from './request/request-delete/request-delete.component';
 import {DatasetDeleteComponent} from './dataset/dataset-delete/dataset-delete.component';
+import {DatasetModifyComponent} from "./dataset/dataset-modify/dataset-modify.component";
 
 const routes: Routes = [
   { path: 'reusers/create', component: ReuserRegisterComponent},
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'users/:id/edit', component: UserEditComponent, canActivate: [LoggedInGuard]},
   { path: 'datasets/create', component: DatasetCreateComponent},
   { path: 'datasets/:id/delete', component: DatasetDeleteComponent},
+  { path: 'datasets/:id/edit', component: DatasetModifyComponent},
   { path: 'datasets/:id', component: DatasetDetailsComponent},
   { path: 'datasets', component: DatasetListComponent},
   { path: 'about', component: AboutComponent},
