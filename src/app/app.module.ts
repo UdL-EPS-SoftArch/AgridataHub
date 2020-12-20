@@ -20,7 +20,6 @@ import {ProviderService} from './provider/provider.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
 import { DatasetCreateComponent } from './dataset/dataset-create/dataset-create.component';
@@ -35,6 +34,7 @@ import {RequestCreateComponent} from './request/request-create/request-create.co
 import {RequestListComponent} from './request/request-list/request-list.component';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+import {RequestDetailComponent} from './request/request-detail/request-detail.component';
 import {DatasetRequestCreateComponent} from './DatasetRequest/DatasetRequest-create/DatasetRequest-create.component';
 import {DatasetRequestListComponent} from './DatasetRequest/DatasetRequest-list/DatasetRequest-list.component';
 import {DatasetRequestDetailComponent} from './DatasetRequest/DatasetRequest-detail/DatasetRequest-detail.component';
@@ -50,7 +50,6 @@ registerLocaleData(localeEs);
   declarations: [
     AppComponent,
     NavbarComponent,
-    UserDetailComponent,
     ReuserRegisterComponent,
     ReuserListComponent,
     ReuserDeleteComponent,
@@ -63,6 +62,7 @@ registerLocaleData(localeEs);
     DatasetListComponent,
     RequestCreateComponent,
     RequestListComponent,
+    RequestDetailComponent,
     DatasetRequestCreateComponent,
     DatasetRequestListComponent,
     DatasetRequestDetailComponent,

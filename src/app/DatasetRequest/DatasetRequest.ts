@@ -1,6 +1,6 @@
 import {Resource} from '@lagoshny/ngx-hal-client';
 import {Dataset} from '../dataset/dataset';
-
+import {Request} from '../request/request';
 export class DatasetRequest extends Resource{
 
   id: number;
