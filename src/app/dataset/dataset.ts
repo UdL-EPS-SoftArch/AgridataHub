@@ -1,4 +1,5 @@
 import {Resource} from '@lagoshny/ngx-hal-client';
+import {Provider} from '../provider/provider';
 
 export class Dataset extends Resource {
   id: number;
@@ -7,6 +8,7 @@ export class Dataset extends Resource {
   content: string | ArrayBuffer;
   createdAt: Date;
   contentType: string;
+  providedBy: Provider;
 
   uri: string;
 

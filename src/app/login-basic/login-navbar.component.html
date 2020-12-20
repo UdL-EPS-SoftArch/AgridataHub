@@ -3,8 +3,13 @@
     <span class="fas fa-sign-out-alt"></span> Logout</a>
 </li>
 
-<li class="nav-item" *ngIf="isLoggedIn()" id="currentUser">
-  <a class="nav-link" [routerLink]="['/users', getCurrentUser().id]">
+<li class="nav-item" *ngIf="isLoggedIn()" id="currentReuser">
+  <a class="nav-link" *ngIf="isRole('reuser')" [routerLink]="['/reusers', getCurrentUser().id]">
+    <span class="fas fa-user-circle"></span> {{getCurrentUser().id}}</a>
+</li>
+
+<li class="nav-item" *ngIf="isLoggedIn()" id="currentProvider">
+  <a class="nav-link" *ngIf="isRole('provider')" [routerLink]="['/providers', getCurrentUser().id]">
     <span class="fas fa-user-circle"></span> {{getCurrentUser().id}}</a>
 </li>
 

@@ -33,7 +33,8 @@ export class DatasetListComponent implements OnInit {
 
   changePage(): void {
     this.datasetService.page(this.page - 1).subscribe(
-      (datasets: Dataset[]) => this.datasets = datasets);
+      (datasets: Dataset[]) => {
+        this.datasets = datasets;
+      });
   }
-
 }
