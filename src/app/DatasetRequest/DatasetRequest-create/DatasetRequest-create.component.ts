@@ -4,8 +4,12 @@ import {DatasetRequest} from '../DatasetRequest';
 import {Location} from '@angular/common';
 import {AuthenticationBasicService} from '../../login-basic/authentication-basic.service';
 import {DatasetRequestService} from '../DatasetRequest.service';
-import {Request} from 'Request/request';
+import {Request} from '../../request/request';
+import {Dataset} from '../../dataset/dataset';
+
 import {RequestService} from '../../request/request.service';
+import {DatasetService} from '../../dataset/dataset.service';
+
 import {Sort} from '@lagoshny/ngx-hal-client';
 
 @Component({
@@ -15,6 +19,7 @@ import {Sort} from '@lagoshny/ngx-hal-client';
 })
 export class DatasetRequestCreateComponent implements OnInit {
   public requests: Request[];
+  public datasets: Dataset[];
   public datasetRequest: DatasetRequest;
   public successAlert: boolean;
   private sorting: Sort[] = [{path: 'date', order: 'DESC'}];
@@ -25,6 +30,7 @@ export class DatasetRequestCreateComponent implements OnInit {
   constructor(private router: Router,
               private location: Location,
               private requestService: RequestService,
+              private datasetService: DatasetService,
               private datasetRequestService: DatasetRequestService,
               private authenticationBasicService: AuthenticationBasicService) { }
 
@@ -34,11 +40,20 @@ export class DatasetRequestCreateComponent implements OnInit {
         this.requests = requests;
         this.totalRequest = this.requestService.totalElement();
       });
+
+    this.datasetService.getAll({size: this.pageSize, sort: this.sorting}).subscribe(
+      (datasets: Dataset[]) => {
+        this.datasets = datasets;
+        this.totalRequest = this.requestService.totalElement();
+      });
+
     this.datasetRequest = new DatasetRequest();
   }
   onSubmit(): void {
     this.datasetRequestService.create(this.datasetRequest).subscribe(
-      (request: DatasetRequest) => this.router.navigate(['/DatasetRequest'])
+      (newDatasetRequest: DatasetRequest) => {
+        this.router.navigate(['/datasetRequest/']);
+      }
     );
   }
   closeAlert(): void {

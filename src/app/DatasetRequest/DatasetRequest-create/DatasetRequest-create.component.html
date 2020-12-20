@@ -7,20 +7,24 @@
 <form id="DatasetRequest-form" (ngSubmit)="onSubmit()" #form="ngForm">
   <fieldset>
     <div class="form-group">
-      <label class="control-label">Select the datasets in order to create the DatasetRequest:</label>
+      <label class="control-label">Select the Request:</label>
       <p>
         <label>
-          <select name="selectDatasets" [(ngModel)]="requests" multiple="multiple">
-            <option [value]="request" *ngFor="let request of requests">{{request}}</option>
+          <select name="selectRequests" [(ngModel)]="datasetRequest.requestedIn" >
+            <option [value]="request" *ngFor="let request of requests">{{request.description}}</option>
           </select>
         </label>
       </p>
 
-      <ul>
-        <li *ngFor="let request of requests">
-          {{request}}
-        </li>
-      </ul>
+      <label class="control-label">Select the dataset:</label>
+      <p>
+        <label>
+          <select name="selectDatasets" [(ngModel)]="datasetRequest.requestOf" >
+            <option [value]="dataset" *ngFor="let dataset of datasets">{{dataset.description}}</option>
+          </select>
+        </label>
+      </p>
+
     </div>
     <div class="form-group">
       <label class="control-label" for="name">Add a description for your DatasetRequest:</label>
