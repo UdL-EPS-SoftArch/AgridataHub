@@ -35,6 +35,10 @@ import {RequestCreateComponent} from './request/request-create/request-create.co
 import {RequestListComponent} from './request/request-list/request-list.component';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+import {DatasetRequestCreateComponent} from './DatasetRequest/DatasetRequest-create/DatasetRequest-create.component';
+import {DatasetRequestListComponent} from './DatasetRequest/DatasetRequest-list/DatasetRequest-list.component';
+import {DatasetRequestDetailComponent} from './DatasetRequest/DatasetRequest-detail/DatasetRequest-detail.component';
+import {DatasetRequestDeleteComponent} from './DatasetRequest/DatasetRequest-delete/DatasetRequest-delete.component';
 
 
 
@@ -58,7 +62,11 @@ registerLocaleData(localeEs);
     DatasetCreateComponent,
     DatasetListComponent,
     RequestCreateComponent,
-    RequestListComponent
+    RequestListComponent,
+    DatasetRequestCreateComponent,
+    DatasetRequestListComponent,
+    DatasetRequestDetailComponent,
+    DatasetRequestDeleteComponent
   ],
   imports: [
     BrowserModule,

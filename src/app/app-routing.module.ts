@@ -6,6 +6,9 @@ import { NotFoundComponent } from './error-handler/error-alert/not-found.compone
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import {DatasetCreateComponent} from './dataset/dataset-create/dataset-create.component';
+import {DatasetRequestCreateComponent} from './DatasetRequest/DatasetRequest-create/DatasetRequest-create.component';
+import {DatasetRequestDetailComponent} from './DatasetRequest/DatasetRequest-detail/DatasetRequest-detail.component';
+import {DatasetRequestListComponent} from './DatasetRequest/DatasetRequest-list/DatasetRequest-list.component';
 import {DatasetListComponent} from './dataset/dataset-list/dataset-list.component';
 import {ProviderRegisterComponent} from './provider/provider-register/provider-register.component';
 import {ProviderListComponent} from './provider/provider-list/provider.list.component';
@@ -22,6 +25,8 @@ import {RequestDetailComponent} from './request/request-detail/request-detail.co
 
 
 
+
+
 const routes: Routes = [
   { path: 'reusers/create', component: ReuserRegisterComponent},
   { path: 'reusers', component: ReuserListComponent, canActivate: [LoggedInGuard]},
@@ -32,6 +37,9 @@ const routes: Routes = [
   { path: 'users/:id/edit', component: UserEditComponent, canActivate: [LoggedInGuard]},
   { path: 'users/:id', component: UserDetailComponent, canActivate: [LoggedInGuard]},
   { path: 'datasets/create', component: DatasetCreateComponent},
+  { path: 'DatasetRequest/create', component: DatasetRequestCreateComponent},
+  { path: 'DatasetRequest', component: DatasetRequestListComponent},
+  { path: 'DatasetRequest/:id', component: DatasetRequestDetailComponent},
   { path: 'datasets', component: DatasetListComponent},
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
