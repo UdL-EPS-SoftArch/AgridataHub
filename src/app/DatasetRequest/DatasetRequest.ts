@@ -5,7 +5,6 @@ export class DatasetRequest extends Resource{
 
   id: number;
   granted: boolean;
-  description: string;
   requestedIn: Request;
   requestOf: Dataset;
   uri: string;
