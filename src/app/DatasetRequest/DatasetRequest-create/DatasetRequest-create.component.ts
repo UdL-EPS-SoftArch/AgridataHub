@@ -52,7 +52,7 @@ export class DatasetRequestCreateComponent implements OnInit {
   onSubmit(): void {
     this.datasetRequestService.create(this.datasetRequest).subscribe(
       (newDatasetRequest: DatasetRequest) => {
-        this.router.navigate(['/datasetRequest/']);
+        this.router.navigate(['/datasetRequests']);
       }
     );
   }
