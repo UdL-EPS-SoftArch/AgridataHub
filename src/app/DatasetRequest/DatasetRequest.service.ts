@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 })
 export class DatasetRequestService extends RestService<DatasetRequest>{
   constructor(injector: Injector) {
-    super(DatasetRequest, 'DatasetRequest', injector);
+    super(DatasetRequest, 'datasetRequests', injector);
   }
 
   public findById(uri: string): Observable<DatasetRequest> {
