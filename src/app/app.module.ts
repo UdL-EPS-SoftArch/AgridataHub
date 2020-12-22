@@ -14,23 +14,25 @@ import { LoggedInGuard } from './login-basic/loggedin.guard';
 import { AuthInterceptor } from './login-basic/auth-interceptor';
 
 import { AuthenticationBasicService } from './login-basic/authentication-basic.service';
-import { UserService } from './user/user.service';
 import {ReuserService} from './reuser/reuser.service';
 import {ProviderService} from './provider/provider.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { UserSearchComponent } from './user/user-search/user-search.component';
 import { DatasetCreateComponent } from './dataset/dataset-create/dataset-create.component';
 import { DatasetListComponent } from './dataset/dataset-list/dataset-list.component';
 import { ProviderRegisterComponent } from './provider/provider-register/provider-register.component';
 import { ProviderListComponent } from './provider/provider-list/provider.list.component';
 import { ProviderDeleteComponent } from './provider/provider-delete/provider-delete.component';
 import { ProviderDetailComponent } from './provider/provider-detail/provider-detail.component';
+import { ProviderEditComponent } from './provider/provider-edit/provider-edit.component';
+import { ProviderSearchComponent } from './provider/provider-search/provider-search.component';
 import { ReuserRegisterComponent } from './reuser/reuser-register/reuser-register.component';
 import { ReuserListComponent } from './reuser/reuser-list/reuser-list.component';
 import { ReuserDeleteComponent } from './reuser/reuser-delete/reuser-delete.component';
 import { ReuserDetailComponent } from './reuser/reuser-detail/reuser-detail.component';
+import { ReuserEditComponent } from './reuser/reuser-edit/reuser-edit.component';
+import { ReuserSearchComponent } from './reuser/reuser-search/reuser-search.component';
 import {RequestCreateComponent} from './request/request-create/request-create.component';
 import {RequestListComponent} from './request/request-list/request-list.component';
 import { registerLocaleData } from '@angular/common';
@@ -41,8 +43,10 @@ import { DatasetDetailsComponent } from './dataset/dataset-details/dataset-detai
 import { DatasetDeleteComponent } from './dataset/dataset-delete/dataset-delete.component';
 import { DatasetModifyComponent } from './dataset/dataset-modify/dataset-modify.component';
 import {RequestEditComponent} from './request/request-edit/request-edit.component';
-import {ProviderEditComponent} from './provider/provider-edit/provider-edit.component';
-import {ReuserEditComponent} from './reuser/reuser-edit/reuser-edit.component';
+
+
+
+
 
 
 
@@ -59,12 +63,13 @@ registerLocaleData(localeEs);
     ReuserDeleteComponent,
     ReuserDetailComponent,
     ReuserEditComponent,
+    ReuserSearchComponent,
     ProviderRegisterComponent,
     ProviderListComponent,
     ProviderDeleteComponent,
     ProviderDetailComponent,
     ProviderEditComponent,
-    UserSearchComponent,
+    ProviderSearchComponent,
     DatasetCreateComponent,
     DatasetListComponent,
     DatasetDetailsComponent,
@@ -72,9 +77,9 @@ registerLocaleData(localeEs);
     RequestListComponent,
     RequestDetailComponent,
     RequestDeleteComponent,
+    RequestEditComponent,
     DatasetDeleteComponent,
-    DatasetModifyComponent,
-    RequestEditComponent
+    DatasetModifyComponent
   ],
   imports: [
     BrowserModule,
@@ -94,7 +99,7 @@ registerLocaleData(localeEs);
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
     { provide: 'ExternalConfigurationService', useClass: ExternalConfigurationService },
-    AuthenticationBasicService, LoggedInGuard, UserService, ProviderService, ReuserService,
+    AuthenticationBasicService, LoggedInGuard, ProviderService, ReuserService,
   ],
   bootstrap: [AppComponent]
 })
