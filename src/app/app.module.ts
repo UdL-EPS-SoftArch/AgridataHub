@@ -20,7 +20,6 @@ import {ProviderService} from './provider/provider.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
 import { DatasetCreateComponent } from './dataset/dataset-create/dataset-create.component';
 import { DatasetListComponent } from './dataset/dataset-list/dataset-list.component';
@@ -28,10 +27,12 @@ import { ProviderRegisterComponent } from './provider/provider-register/provider
 import { ProviderListComponent } from './provider/provider-list/provider.list.component';
 import { ProviderDeleteComponent } from './provider/provider-delete/provider-delete.component';
 import { ProviderDetailComponent } from './provider/provider-detail/provider-detail.component';
+import { ProviderEditComponent } from './provider/provider-edit/provider-edit.component';
 import { ReuserRegisterComponent } from './reuser/reuser-register/reuser-register.component';
 import { ReuserListComponent } from './reuser/reuser-list/reuser-list.component';
 import { ReuserDeleteComponent } from './reuser/reuser-delete/reuser-delete.component';
 import { ReuserDetailComponent } from './reuser/reuser-detail/reuser-detail.component';
+import { ReuserEditComponent } from './reuser/reuser-edit/reuser-edit.component';
 import {RequestCreateComponent} from './request/request-create/request-create.component';
 import {RequestListComponent} from './request/request-list/request-list.component';
 import { registerLocaleData } from '@angular/common';
@@ -41,6 +42,11 @@ import {RequestDeleteComponent} from './request/request-delete/request-delete.co
 import { DatasetDetailsComponent } from './dataset/dataset-details/dataset-details.component';
 import { DatasetDeleteComponent } from './dataset/dataset-delete/dataset-delete.component';
 import { DatasetModifyComponent } from './dataset/dataset-modify/dataset-modify.component';
+
+
+
+
+
 
 
 registerLocaleData(localeEs);
@@ -53,11 +59,12 @@ registerLocaleData(localeEs);
     ReuserListComponent,
     ReuserDeleteComponent,
     ReuserDetailComponent,
+    ReuserEditComponent,
     ProviderRegisterComponent,
     ProviderListComponent,
     ProviderDeleteComponent,
     ProviderDetailComponent,
-    UserEditComponent,
+    ProviderEditComponent,
     UserSearchComponent,
     DatasetCreateComponent,
     DatasetListComponent,
