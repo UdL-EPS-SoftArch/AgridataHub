@@ -16,7 +16,7 @@
         <div class="dropdown-menu" aria-labelledby="datasetDropdown" ngbDropdownMenu>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/datasets']"><span class="fas fa-list"></span> List</a>
-          <a *ngIf="isLogged()" class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+          <a *ngIf="isProvider()" class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/datasets/create']"><span class="far fa-plus-square"></span> Create</a>
         </div>
       </li>
