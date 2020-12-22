@@ -28,6 +28,7 @@ import { ProviderListComponent } from './provider/provider-list/provider.list.co
 import { ProviderDeleteComponent } from './provider/provider-delete/provider-delete.component';
 import { ProviderDetailComponent } from './provider/provider-detail/provider-detail.component';
 import { ProviderEditComponent } from './provider/provider-edit/provider-edit.component';
+import { ProviderSearchComponent } from './provider/provider-search/provider-search.component';
 import { ReuserRegisterComponent } from './reuser/reuser-register/reuser-register.component';
 import { ReuserListComponent } from './reuser/reuser-list/reuser-list.component';
 import { ReuserDeleteComponent } from './reuser/reuser-delete/reuser-delete.component';
@@ -43,6 +44,7 @@ import {RequestDeleteComponent} from './request/request-delete/request-delete.co
 import { DatasetDetailsComponent } from './dataset/dataset-details/dataset-details.component';
 import { DatasetDeleteComponent } from './dataset/dataset-delete/dataset-delete.component';
 import { DatasetModifyComponent } from './dataset/dataset-modify/dataset-modify.component';
+
 
 
 
@@ -68,6 +70,7 @@ registerLocaleData(localeEs);
     ProviderDeleteComponent,
     ProviderDetailComponent,
     ProviderEditComponent,
+    ProviderSearchComponent,
     UserSearchComponent,
     DatasetCreateComponent,
     DatasetListComponent,
