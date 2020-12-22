@@ -33,6 +33,7 @@ import { ReuserListComponent } from './reuser/reuser-list/reuser-list.component'
 import { ReuserDeleteComponent } from './reuser/reuser-delete/reuser-delete.component';
 import { ReuserDetailComponent } from './reuser/reuser-detail/reuser-detail.component';
 import { ReuserEditComponent } from './reuser/reuser-edit/reuser-edit.component';
+import { ReuserSearchComponent } from './reuser/reuser-search/reuser-search.component';
 import {RequestCreateComponent} from './request/request-create/request-create.component';
 import {RequestListComponent} from './request/request-list/request-list.component';
 import { registerLocaleData } from '@angular/common';
@@ -42,6 +43,7 @@ import {RequestDeleteComponent} from './request/request-delete/request-delete.co
 import { DatasetDetailsComponent } from './dataset/dataset-details/dataset-details.component';
 import { DatasetDeleteComponent } from './dataset/dataset-delete/dataset-delete.component';
 import { DatasetModifyComponent } from './dataset/dataset-modify/dataset-modify.component';
+
 
 
 
@@ -60,6 +62,7 @@ registerLocaleData(localeEs);
     ReuserDeleteComponent,
     ReuserDetailComponent,
     ReuserEditComponent,
+    ReuserSearchComponent,
     ProviderRegisterComponent,
     ProviderListComponent,
     ProviderDeleteComponent,
