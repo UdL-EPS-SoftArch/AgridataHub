@@ -1,1 +1,21 @@
-<p>request-edit works!</p>
+
+<h4 class="display-4">Modify request description</h4>
+<form id="user-form" (ngSubmit)="onSubmit()" #form="ngForm">
+  <fieldset>
+
+    <!-- Dataset description -->
+    <div class="form-group">
+      <label class="control-label" for="description">New description:</label>
+      <input id="description" name="description" type="text" class="form-control"
+             value="{{request.description}}" [(ngModel)]="request.description">
+    </div>
+
+    <!-- Button -->
+    <div class="form-group">
+      <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [disabled]="!form.form.valid">Submit</button>
+      <button id="listBtn" type="button" (click)="onCancel()" class="btn m-1 btn-outline-primary pull-right">Back</button>
+    </div>
+
+
+  </fieldset>
+</form>

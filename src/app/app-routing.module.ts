@@ -22,6 +22,7 @@ import {RequestDetailComponent} from './request/request-detail/request-detail.co
 import {RequestDeleteComponent} from './request/request-delete/request-delete.component';
 import {DatasetDeleteComponent} from './dataset/dataset-delete/dataset-delete.component';
 import {DatasetModifyComponent} from './dataset/dataset-modify/dataset-modify.component';
+import {RequestEditComponent} from './request/request-edit/request-edit.component';
 
 
 
@@ -55,6 +56,7 @@ const routes: Routes = [
   { path: 'requests/create', component: RequestCreateComponent},
   { path: 'requests/:id', component: RequestDetailComponent},
   { path: 'requests/:id/delete', component: RequestDeleteComponent},
+  { path: 'requests/:id/edit', component: RequestEditComponent},
   ];
 
 @NgModule({
