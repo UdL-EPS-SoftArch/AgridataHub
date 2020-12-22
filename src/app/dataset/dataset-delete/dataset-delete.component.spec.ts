@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RequestDeleteComponent } from './request-delete.component';
+import { DatasetDeleteComponent } from './dataset-delete.component';
 
-describe('RequestDeleteComponent', () => {
-  let component: RequestDeleteComponent;
-  let fixture: ComponentFixture<RequestDeleteComponent>;
+describe('DatasetDeleteComponent', () => {
+  let component: DatasetDeleteComponent;
+  let fixture: ComponentFixture<DatasetDeleteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RequestDeleteComponent ]
+      declarations: [ DatasetDeleteComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RequestDeleteComponent);
+    fixture = TestBed.createComponent(DatasetDeleteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
