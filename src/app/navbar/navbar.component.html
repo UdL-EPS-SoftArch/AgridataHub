@@ -26,7 +26,7 @@
         <div class="dropdown-menu" aria-labelledby="requestDropdown" ngbDropdownMenu>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/requests']"><span class="fas fa-list"></span> See your Requests</a>
-          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+          <a *ngIf="isReuser()" class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/requests/create']"><span class="far fa-plus-square"></span> Create Request</a>
         </div>
       </li>

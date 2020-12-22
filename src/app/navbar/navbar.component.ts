@@ -19,4 +19,8 @@ export class NavbarComponent implements OnInit {
   isLogged(): boolean {
     return this.authenticationService.isLoggedIn();
   }
+
+  isReuser(): boolean {
+    return this.authenticationService.getCurrentUser().getRoles().includes('reuser');
+  }
 }
