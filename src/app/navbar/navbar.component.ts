@@ -23,4 +23,8 @@ export class NavbarComponent implements OnInit {
   isReuser(): boolean {
     return this.authenticationService.getCurrentUser().getRoles().includes('reuser');
   }
+
+  isProvider(): boolean {
+    return this.authenticationService.getCurrentUser().getRoles().includes('provider');
+  }
 }
