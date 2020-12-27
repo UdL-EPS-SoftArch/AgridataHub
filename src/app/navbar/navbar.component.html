@@ -32,18 +32,12 @@
       </li>
       <li class="nav-item" *ngIf="isLogged()" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="reuserDropdown" role="button"
-           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Reusers</a>
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle><span class="far fa-user-circle"></span> Users</a>
         <div class="dropdown-menu" aria-labelledby="reuserDropdown" ngbDropdownMenu>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
-             [routerLink]="['/reusers']"><span class="fas fa-user-circle"></span> List</a>
-        </div>
-      </li>
-      <li class="nav-item" *ngIf="isLogged()" ngbDropdown>
-        <a class="nav-link dropdown-toggle" id="providerDropdown" role="button"
-           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Providers</a>
-        <div class="dropdown-menu" aria-labelledby="providerDropdown" ngbDropdownMenu>
+             [routerLink]="['/reusers']"><span class="fas fa-user-circle"></span> Reusers</a>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
-             [routerLink]="['/providers']"><span class="fas fa-user-circle"></span> List</a>
+             [routerLink]="['/providers']"><span class="fas fa-user-circle"></span> Providers</a>
         </div>
       </li>
     </ul>
