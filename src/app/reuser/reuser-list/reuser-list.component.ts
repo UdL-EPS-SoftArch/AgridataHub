@@ -21,16 +21,11 @@ export class ReuserListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.reuserService.getAll({size: this.pageSize, sort: this.sorting}).subscribe(
+    this.reuserService.getAll({sort: this.sorting}).subscribe(
       (reusers: Reuser[]) => {
         this.reusers = reusers;
         this.totalReusers = this.reuserService.totalElement();
       });
-  }
-
-  changePage(): void {
-    this.reuserService.page(this.page - 1).subscribe(
-      (reusers: Reuser[]) => this.reusers = reusers);
   }
 
   detail(reuser: Reuser): void {

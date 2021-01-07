@@ -21,7 +21,7 @@ export class ProviderListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.providerService.getAll({size: this.pageSize, sort: this.sorting}).subscribe(
+    this.providerService.getAll({sort: this.sorting}).subscribe(
       (providers: Provider[]) => {
         this.providers = providers;
         this.totalProviders = this.providerService.totalElement();

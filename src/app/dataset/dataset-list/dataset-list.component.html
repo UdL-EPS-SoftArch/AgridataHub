@@ -2,7 +2,7 @@
 <p class="lead mb-4">These are all the current available datasets in Agrdata<b>Hub</b>. If you are a Reuser, you will be able
   to request one.</p>
 <div class="row">
-  <div class="col-md-6 col-lg-4 mb-3" *ngFor="let dataset of datasets;">
+  <tr class="col-md-6 col-lg-4 mb-3" *ngFor="let dataset of datasets  | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
     <div class="card bg-light mb-3 mx-auto">
       <div class="card-header font-weight-bold">
         <span class="far fa-file mr-1"></span> {{dataset.title}}
@@ -15,9 +15,7 @@
       <ng-template #disabledButtonBlock><a class="btn btn-sm btn-outline-info w-25 ml-auto mr-3 disabled">Details</a></ng-template>
       <p class="card-text text-muted m-3 small">Created {{dataset.createdAt | date:'short'}} by <span class="user-link" [routerLink]="['/providers', dataset.providedBy]"><u>{{dataset.providedBy}}</u></span></p>
     </div>
-  </div>
+  </tr>
 </div>
-
 <ngb-pagination class="d-flex justify-content-center"
-                [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalDatasets"
-                (pageChange)="changePage()"></ngb-pagination>
+                [(page)]="page" [pageSize]="pageSize" [collectionSize]="datasets.length"></ngb-pagination>

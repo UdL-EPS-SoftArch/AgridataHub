@@ -24,17 +24,11 @@ export class DatasetListComponent implements OnInit {
               private authenticationBasicService: AuthenticationBasicService) { }
 
   ngOnInit(): void {
-    this.datasetService.getAll({size: this.pageSize, sort: this.sorting}).subscribe(
+    this.datasetService.getAll({sort: this.sorting}).subscribe(
       (datasets: Dataset[]) => {
         this.datasets = datasets;
         this.totalDatasets = this.datasetService.totalElement();
       });
   }
 
-  changePage(): void {
-    this.datasetService.page(this.page - 1).subscribe(
-      (datasets: Dataset[]) => {
-        this.datasets = datasets;
-      });
-  }
 }

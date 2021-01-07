@@ -1,6 +1,6 @@
 <app-reuser-search (emitResults)="detail($event)"></app-reuser-search>
 
-<div class="card mb-1" *ngFor="let reuser of reusers">
+<div class="card mb-1" *ngFor="let reuser of reusers | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
   <div class="card-block row m-1 col-12">
     <div class="card-body row align-items-center">
       <div class="col-6 mt-1">
@@ -16,5 +16,4 @@
 </div>
 
 <ngb-pagination class="d-flex justify-content-center"
-                [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalReusers"
-                (pageChange)="changePage()"></ngb-pagination>
+                [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalReusers"></ngb-pagination>
