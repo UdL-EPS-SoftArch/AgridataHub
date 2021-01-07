@@ -1,29 +1,31 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { UserService } from '../user.service';
-import { User } from '../../login-basic/user';
+import { ProviderService } from '../provider.service';
+import { Provider } from '../provider';
 import { Observable, of } from 'rxjs';
 import { catchError, debounceTime, distinctUntilChanged, switchMap, tap } from 'rxjs/operators';
 
+
+
 @Component({
-  selector: 'app-user-search',
-  templateUrl: './user-search.component.html'
+  selector: 'app-provider-search',
+  templateUrl: './provider-search.component.html'
 })
 
-export class UserSearchComponent {
-  @Output() emitResults: EventEmitter<User> = new EventEmitter();
+export class ProviderSearchComponent {
+  @Output() emitResults: EventEmitter<Provider> = new EventEmitter();
   searchFailed = false;
   searching = false;
 
-  constructor(private userService: UserService) {
+  constructor(private providerService: ProviderService) {
   }
 
-  search(): (text$: Observable<string>) => Observable<User[]> {
+  search(): (text$: Observable<string>) => Observable<Provider[]> {
     return (text$: Observable<string>) => text$.pipe(
       debounceTime(500),
       distinctUntilChanged(),
       tap(() => this.searching = true),
       switchMap(term => term.length < 3 ? of([]) :
-        this.userService.findByUsernameContaining(term).pipe(
+        this.providerService.findByUsernameContaining(term).pipe(
           tap(() => this.searchFailed = false),
           catchError(() => {
             this.searchFailed = true;
@@ -35,6 +37,6 @@ export class UserSearchComponent {
   }
 
   select(item: any): void {
-    this.emitResults.emit(item as User);
+    this.emitResults.emit(item as Provider);
   }
 }
