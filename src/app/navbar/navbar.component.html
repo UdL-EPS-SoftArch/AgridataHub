@@ -16,7 +16,7 @@
         <div class="dropdown-menu" aria-labelledby="datasetDropdown" ngbDropdownMenu>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/datasets']"><span class="fas fa-list"></span> List</a>
-          <a *ngIf="isLogged()" class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+          <a *ngIf="isProvider()" class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/datasets/create']"><span class="far fa-plus-square"></span> Create</a>
         </div>
       </li>
@@ -26,7 +26,7 @@
         <div class="dropdown-menu" aria-labelledby="requestDropdown" ngbDropdownMenu>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/requests']"><span class="fas fa-list"></span> See your Requests</a>
-          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+          <a *ngIf="isReuser()" class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/requests/create']"><span class="far fa-plus-square"></span> Create Request</a>
         </div>
       </li>
@@ -42,18 +42,12 @@
       </li>
       <li class="nav-item" *ngIf="isLogged()" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="reuserDropdown" role="button"
-           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Reusers</a>
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle><span class="far fa-user-circle"></span> Users</a>
         <div class="dropdown-menu" aria-labelledby="reuserDropdown" ngbDropdownMenu>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
-             [routerLink]="['/reusers']"><span class="fas fa-user-circle"></span> List</a>
-        </div>
-      </li>
-      <li class="nav-item" *ngIf="isLogged()" ngbDropdown>
-        <a class="nav-link dropdown-toggle" id="providerDropdown" role="button"
-           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Providers</a>
-        <div class="dropdown-menu" aria-labelledby="providerDropdown" ngbDropdownMenu>
+             [routerLink]="['/reusers']"><span class="fas fa-user-circle"></span> Reusers</a>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
-             [routerLink]="['/providers']"><span class="fas fa-user-circle"></span> List</a>
+             [routerLink]="['/providers']"><span class="fas fa-user-circle"></span> Providers</a>
         </div>
       </li>
     </ul>
