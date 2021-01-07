@@ -20,7 +20,7 @@
       <p>
         <label>
           <select name="selectDatasets" [(ngModel)]="datasetRequest.requestOf" >
-            <option [value]="dataset.uri" *ngFor="let dataset of datasets">{{dataset.description}}</option>
+            <option [value]="dataset.uri" *ngFor="let dataset of datasets">{{dataset.title}}</option>
           </select>
         </label>
       </p>
