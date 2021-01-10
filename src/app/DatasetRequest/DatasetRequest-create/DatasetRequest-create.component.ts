@@ -13,7 +13,7 @@ import {DatasetService} from '../../dataset/dataset.service';
 import {Sort} from '@lagoshny/ngx-hal-client';
 
 @Component({
-  selector: 'app-DatasetRequest-create',
+  selector: 'app-dataset-request-create',
   templateUrl: './DatasetRequest-create.component.html',
   styleUrls: ['./DatasetRequest-create.component.css']
 })

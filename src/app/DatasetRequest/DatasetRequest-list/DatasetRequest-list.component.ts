@@ -6,7 +6,7 @@ import {Sort} from '@lagoshny/ngx-hal-client';
 
 
 @Component({
-  selector: 'app-DatasetRequest-list',
+  selector: 'app-dataset-request-list',
   templateUrl: './DatasetRequest-list.component.html',
   styleUrls: ['./DatasetRequest-list.component.css']
 })
