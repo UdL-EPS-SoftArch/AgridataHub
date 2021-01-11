@@ -43,6 +43,10 @@ import { DatasetDetailsComponent } from './dataset/dataset-details/dataset-detai
 import { DatasetDeleteComponent } from './dataset/dataset-delete/dataset-delete.component';
 import { DatasetModifyComponent } from './dataset/dataset-modify/dataset-modify.component';
 import {RequestEditComponent} from './request/request-edit/request-edit.component';
+import {DatasetRequestDeleteComponent} from './DatasetRequest/DatasetRequest-delete/DatasetRequest-delete.component';
+import {DatasetRequestDetailComponent} from './DatasetRequest/DatasetRequest-detail/DatasetRequest-detail.component';
+import {DatasetRequestCreateComponent} from './DatasetRequest/DatasetRequest-create/DatasetRequest-create.component';
+import {DatasetRequestListComponent} from './DatasetRequest/DatasetRequest-list/DatasetRequest-list.component';
 
 
 
@@ -79,7 +83,11 @@ registerLocaleData(localeEs);
     RequestDeleteComponent,
     RequestEditComponent,
     DatasetDeleteComponent,
-    DatasetModifyComponent
+    DatasetModifyComponent,
+    DatasetRequestCreateComponent,
+    DatasetRequestListComponent,
+    DatasetRequestDetailComponent,
+    DatasetRequestDeleteComponent,
   ],
   imports: [
     BrowserModule,
