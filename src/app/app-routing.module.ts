@@ -23,9 +23,9 @@ import {RequestDeleteComponent} from './request/request-delete/request-delete.co
 import {DatasetDeleteComponent} from './dataset/dataset-delete/dataset-delete.component';
 import {DatasetModifyComponent} from './dataset/dataset-modify/dataset-modify.component';
 import {RequestEditComponent} from './request/request-edit/request-edit.component';
-
-
-
+import {DatasetRequestCreateComponent} from './DatasetRequest/DatasetRequest-create/DatasetRequest-create.component';
+import {DatasetRequestDetailComponent} from './DatasetRequest/DatasetRequest-detail/DatasetRequest-detail.component';
+import {DatasetRequestListComponent} from './DatasetRequest/DatasetRequest-list/DatasetRequest-list.component';
 
 
 
@@ -57,7 +57,10 @@ const routes: Routes = [
   { path: 'requests/:id', component: RequestDetailComponent},
   { path: 'requests/:id/delete', component: RequestDeleteComponent},
   { path: 'requests/:id/edit', component: RequestEditComponent},
-  ];
+  { path: 'DatasetRequest/create', component: DatasetRequestCreateComponent},
+  { path: 'datasetRequests', component: DatasetRequestListComponent},
+  { path: 'datasetRequests/:id', component: DatasetRequestDetailComponent},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
