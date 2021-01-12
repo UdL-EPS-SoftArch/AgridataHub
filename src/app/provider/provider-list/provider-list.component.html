@@ -1,6 +1,6 @@
 <app-provider-search (emitResults)="detail($event)"></app-provider-search>
 
-<div class="card mb-1" *ngFor="let provider of providers">
+<div class="card mb-1" *ngFor="let provider of providers | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
   <div class="card-block row m-1 col-12">
     <div class="card-body row align-items-center">
       <div class="col-6 mt-1">
@@ -16,5 +16,4 @@
 </div>
 
 <ngb-pagination class="d-flex justify-content-center"
-                [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalProviders"
-                (pageChange)="changePage()"></ngb-pagination>
+                [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalProviders"></ngb-pagination>
