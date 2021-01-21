@@ -47,8 +47,10 @@ import {DatasetRequestDeleteComponent} from './DatasetRequest/DatasetRequest-del
 import {DatasetRequestDetailComponent} from './DatasetRequest/DatasetRequest-detail/DatasetRequest-detail.component';
 import {DatasetRequestCreateComponent} from './DatasetRequest/DatasetRequest-create/DatasetRequest-create.component';
 import {DatasetRequestListComponent} from './DatasetRequest/DatasetRequest-list/DatasetRequest-list.component';
+import {DatasetRequestEditComponent} from './DatasetRequest/DatasetRequest-edit/DatasetRequest-edit.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+
 
 registerLocaleData(localeEs);
 
@@ -82,6 +84,7 @@ registerLocaleData(localeEs);
     DatasetRequestListComponent,
     DatasetRequestDetailComponent,
     DatasetRequestDeleteComponent,
+    DatasetRequestEditComponent,
   ],
   imports: [
     BrowserModule,
