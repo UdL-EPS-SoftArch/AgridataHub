@@ -14,8 +14,7 @@ export class DatasetRequestDetailComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute, private datasetRequestService: DatasetRequestService) { }
 
   ngOnInit(): void {
-    // const id = this.route.snapshot.paramMap.get('id');
-    const id = 4;
+    const id = this.route.snapshot.paramMap.get('id');
     this.datasetRequestService.get(id).subscribe((datasetRequest: DatasetRequest) => {
       this.datasetRequest = datasetRequest;
     });

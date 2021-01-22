@@ -5,6 +5,7 @@ import {DatasetRequestService} from '../DatasetRequest.service';
 import {Sort} from '@lagoshny/ngx-hal-client';
 
 
+
 @Component({
   selector: 'app-dataset-request-list',
   templateUrl: './DatasetRequest-list.component.html',
@@ -25,6 +26,13 @@ export class DatasetRequestListComponent implements OnInit {
       (datasetRequests: DatasetRequest[]) => {
         this.datasetRequests = datasetRequests;
         this.totalDatasetRequests = this.datasetRequestService.totalElement();
+      });
+  }
+
+  changePage(): void {
+    this.datasetRequestService.page(this.page - 1).subscribe(
+      (datasetRequests: DatasetRequest[]) => {
+        this.datasetRequests = datasetRequests;
       });
   }
 }

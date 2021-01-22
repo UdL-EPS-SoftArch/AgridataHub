@@ -1,3 +1,6 @@
+<h4 class="display-4" xmlns:slice="http://www.w3.org/1999/xhtml" xmlns:slice="http://www.w3.org/1999/xhtml">DatasetsRequest</h4>
+<p class="lead mb-4">These are all the current available datasetRequests in Agrdata<b>Hub</b>. If you are a Reuser, you will be able
+  to request one.</p>
 <div class="card mb-1" *ngFor="let datasetRequest of datasetRequests; index as i">
   <div class="card-block row m-1 col-12">
     <div class="card-body row align-items-center">
@@ -7,11 +10,15 @@
             <p>{{i+1}}.</p>
           </div>
           <div class="col-5">
-            <h6 class="card-subtitle text-muted">uri:</h6>
-            <a class="card-text" [routerLink]="['/DatasetRequest', datasetRequest.uri]">{{datasetRequest.uri}}</a>
+            <h6 class="card-subtitle text-muted">id:</h6>
+            <a class="card-text" [routerLink]="['/DatasetRequest', datasetRequest.id]">{{datasetRequest.id}}</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<ngb-pagination class="d-flex justify-content-center"
+                [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalDatasetRequests"
+                (pageChange)="changePage()"></ngb-pagination>
