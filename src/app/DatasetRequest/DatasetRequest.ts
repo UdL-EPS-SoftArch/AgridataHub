@@ -9,6 +9,7 @@ export class DatasetRequest extends Resource{
   requestOf: Dataset;
   uri: string;
 
+
   constructor(values: object = {}) {
     super();
     Object.assign(this as any, values);

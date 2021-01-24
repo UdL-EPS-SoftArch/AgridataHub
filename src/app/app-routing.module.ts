@@ -26,6 +26,8 @@ import {RequestEditComponent} from './request/request-edit/request-edit.componen
 import {DatasetRequestCreateComponent} from './DatasetRequest/DatasetRequest-create/DatasetRequest-create.component';
 import {DatasetRequestDetailComponent} from './DatasetRequest/DatasetRequest-detail/DatasetRequest-detail.component';
 import {DatasetRequestListComponent} from './DatasetRequest/DatasetRequest-list/DatasetRequest-list.component';
+import {DatasetRequestEditComponent} from './DatasetRequest/DatasetRequest-edit/DatasetRequest-edit.component';
+import {DatasetRequestDeleteComponent} from './DatasetRequest/DatasetRequest-delete/DatasetRequest-delete.component';
 
 
 
@@ -44,7 +46,6 @@ const routes: Routes = [
   { path: 'providers/:id', component: ProviderDetailComponent, canActivate: [LoggedInGuard]},
   { path: 'providers/:id/delete', component: ProviderDeleteComponent, canActivate: [LoggedInGuard]},
   { path: 'providers/:id/edit', component: ProviderEditComponent, canActivate: [LoggedInGuard]},
-  { path: 'providers/:id/edit', component: ProviderEditComponent, canActivate: [LoggedInGuard]},
   { path: 'datasets/create', component: DatasetCreateComponent},
   { path: 'datasets/:id/delete', component: DatasetDeleteComponent},
   { path: 'datasets/:id/edit', component: DatasetModifyComponent},
@@ -61,6 +62,8 @@ const routes: Routes = [
   { path: 'datasetRequests/create', component: DatasetRequestCreateComponent},
   { path: 'datasetRequests', component: DatasetRequestListComponent},
   { path: 'datasetRequests/:id', component: DatasetRequestDetailComponent},
+  { path: 'DatasetRequest/:id/delete', component: DatasetRequestDeleteComponent},
+  { path: 'DatasetRequest/:id/edit', component: DatasetRequestEditComponent},
 ];
 
 @NgModule({

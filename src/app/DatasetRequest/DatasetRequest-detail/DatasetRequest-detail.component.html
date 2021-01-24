@@ -1,1 +1,23 @@
-<p>DatasetRequest-detail works!</p>
+<div class="card mb-1">
+  <div class="card-block">
+    <h4 class="card-title col-md-6 p-2">DatasetRequest Detail</h4>
+    <div class="card-body row m-1">
+      <div class="col-md-6 p-3">
+        <h6 class="card-text"><b>Id:</b> {{datasetRequest.id}}</h6>
+        <p class="card-text text-justify"><b>requestedIn:</b> {{datasetRequest.requestedIn.description}}</p>
+        <p class="card-text text-justify"><b>requestOf:</b> {{datasetRequest.requestOf.description}}</p>
+      </div>
+    </div>
+    <div class="card-footer text-right">
+      <button id="listBtn" type="button" [routerLink]="['/DatasetRequest']"
+              class="btn m-1 btn-outline-primary">Return to list
+      </button>
+      <button id="editBtn" type="button" [routerLink]="['edit']"
+              class="btn m-1 btn-outline-success">Edit
+      </button>
+      <button id="deleteBtn" type="button" [routerLink]="['delete']"
+              class="btn m-1 btn-outline-danger">Delete
+      </button>
+    </div>
+  </div>
+</div>
