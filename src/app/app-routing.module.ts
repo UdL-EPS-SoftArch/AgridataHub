@@ -44,6 +44,7 @@ const routes: Routes = [
   { path: 'providers/:id', component: ProviderDetailComponent, canActivate: [LoggedInGuard]},
   { path: 'providers/:id/delete', component: ProviderDeleteComponent, canActivate: [LoggedInGuard]},
   { path: 'providers/:id/edit', component: ProviderEditComponent, canActivate: [LoggedInGuard]},
+  { path: 'providers/:id/edit', component: ProviderEditComponent, canActivate: [LoggedInGuard]},
   { path: 'datasets/create', component: DatasetCreateComponent},
   { path: 'datasets/:id/delete', component: DatasetDeleteComponent},
   { path: 'datasets/:id/edit', component: DatasetModifyComponent},
@@ -57,7 +58,7 @@ const routes: Routes = [
   { path: 'requests/:id', component: RequestDetailComponent},
   { path: 'requests/:id/delete', component: RequestDeleteComponent},
   { path: 'requests/:id/edit', component: RequestEditComponent},
-  { path: 'DatasetRequest/create', component: DatasetRequestCreateComponent},
+  { path: 'datasetRequests/create', component: DatasetRequestCreateComponent},
   { path: 'datasetRequests', component: DatasetRequestListComponent},
   { path: 'datasetRequests/:id', component: DatasetRequestDetailComponent},
 ];

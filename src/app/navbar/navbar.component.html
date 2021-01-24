@@ -35,9 +35,9 @@
            aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>DatasetRequests</a>
         <div class="dropdown-menu" aria-labelledby="DatasetRequestDropdown" ngbDropdownMenu>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
-             [routerLink]="['/DatasetRequest']"><span class="fas fa-list"></span> See your DatasetRequests</a>
+             [routerLink]="['/datasetRequests']"><span class="fas fa-list"></span> See your DatasetRequests</a>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
-             [routerLink]="['/DatasetRequest/create']"><span class="far fa-plus-square"></span> Create DatasetRequest</a>
+             [routerLink]="['/datasetRequests/create']"><span class="far fa-plus-square"></span> Create DatasetRequest</a>
         </div>
       </li>
       <li class="nav-item" *ngIf="isLogged()" ngbDropdown>

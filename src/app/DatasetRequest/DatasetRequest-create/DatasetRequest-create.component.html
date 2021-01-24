@@ -10,8 +10,8 @@
       <label class="control-label">Select the Request:</label>
       <p>
         <label>
-          <select name="selectRequests" [(ngModel)]="datasetRequest.requestedIn" >
-            <option [value]="request.uri" *ngFor="let request of requests">{{request.description}}</option>
+          <select name="selectRequests" id="requestedInIndex" [(ngModel)]="requestedInIndex" >
+            <option [value]="i" *ngFor="let request of requests; index as i">{{request.description}}</option>
           </select>
         </label>
       </p>
@@ -19,8 +19,8 @@
       <label class="control-label">Select the dataset:</label>
       <p>
         <label>
-          <select name="selectDatasets" [(ngModel)]="datasetRequest.requestOf" >
-            <option [value]="dataset.uri" *ngFor="let dataset of datasets">{{dataset.title}}</option>
+          <select name="selectDatasets" id="requestOfIndex" [(ngModel)]="requestOfIndex" >
+            <option [value]="i" *ngFor="let dataset of datasets; index as i">{{dataset.title}}</option>
           </select>
         </label>
       </p>

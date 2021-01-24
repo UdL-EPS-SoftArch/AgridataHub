@@ -7,8 +7,8 @@
             <p>{{i+1}}.</p>
           </div>
           <div class="col-5">
-            <h6 class="card-subtitle text-muted">Description:</h6>
-            <a class="card-text" [routerLink]="['/DatasetRequest', datasetRequest.id]">{{datasetRequest.description}}</a>
+            <h6 class="card-subtitle text-muted">Dataset Request</h6>
+            <a class="card-text" [routerLink]="[datasetRequest.uri]">{{datasetRequest}}</a>
           </div>
         </div>
       </div>

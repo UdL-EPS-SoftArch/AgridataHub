@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import {Data, Router} from '@angular/router';
 import {DatasetRequest} from '../DatasetRequest';
 import {Location} from '@angular/common';
 import {AuthenticationBasicService} from '../../login-basic/authentication-basic.service';
@@ -26,6 +26,9 @@ export class DatasetRequestCreateComponent implements OnInit {
   public pageSize = 5;
   public page = 1;
 
+  public requestedInIndex = 0;
+  public requestOfIndex = 0;
+
   constructor(private router: Router,
               private location: Location,
               private requestService: RequestService,
@@ -47,9 +50,12 @@ export class DatasetRequestCreateComponent implements OnInit {
     this.datasetRequest = new DatasetRequest();
   }
   onSubmit(): void {
+    this.datasetRequest.requestedIn = this.requests[this.requestedInIndex];
+    this.datasetRequest.requestOf = this.datasets[this.requestOfIndex];
+
     this.datasetRequestService.create(this.datasetRequest).subscribe(
       (newDatasetRequest: DatasetRequest) => {
-        this.router.navigate(['/DatasetRequest']);
+        this.router.navigate(['/datasetRequests']);
       }
     );
   }
