@@ -2,16 +2,16 @@
 <p class="lead mb-4">These are all the current available datasetRequests in Agrdata<b>Hub</b>. If you are a Reuser, you will be able
   to request one.</p>
 <div class="row">
-  <tr class="col-md-6 col-lg-4 mb-3"  *ngFor="let datasetRequest of datasetRequests">
+  <tr class="col-md-6 col-lg-4 mb-3"  *ngFor="let datasetRequest of datasetRequests; index as i">
     <div class="card bg-light mb-3 mx-auto">
       <div class="card-header font-weight-bold">
-        <span class="far fa-file mr-1"><b> Id:</b></span> {{datasetRequest.id}}
+        <span class="far fa-file mr-1"><b> DatasetRequest</b></span> {{i+1}}
       </div>
       <div class="card-body">
-        <p class="card-text text-justify"> {{datasetRequest.requestedIn.description}}</p>
-        <p class="card-text text-justify"> {{datasetRequest.requestOf.description}}</p>
+        <p class="card-text text-justify"> Request: {{datasetRequest.requestedIn.description}}</p>
+        <p class="card-text text-justify"> Dataset: {{datasetRequest.requestOf.title}}</p>
       </div>
-      <a id="details-button" role="button" [routerLink]="['/DatasetRequest', datasetRequest.id]" class="btn btn-sm btn-info w-25 ml-auto mr-3">Details</a>
+      <a id="details-button" role="button" [routerLink]="[datasetRequest.uri]" class="btn btn-sm btn-info w-25 ml-auto mr-3">Details</a>
       <p></p>
     </div>
   </tr>
