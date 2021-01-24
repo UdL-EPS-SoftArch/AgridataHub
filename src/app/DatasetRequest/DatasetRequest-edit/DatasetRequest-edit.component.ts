@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-DatasetRequest-edit',
+  selector: 'app-dataset-request-edit',
   templateUrl: './DatasetRequest-edit.component.html',
   styleUrls: ['./DatasetRequest-edit.component.css']
 })
