@@ -59,9 +59,9 @@ const routes: Routes = [
   { path: 'requests/:id', component: RequestDetailComponent},
   { path: 'requests/:id/delete', component: RequestDeleteComponent},
   { path: 'requests/:id/edit', component: RequestEditComponent},
-  { path: 'DatasetRequest', component: DatasetRequestListComponent},
-  { path: 'DatasetRequest/create', component: DatasetRequestCreateComponent},
-  { path: 'DatasetRequest/:id', component: DatasetRequestDetailComponent},
+  { path: 'datasetRequests/create', component: DatasetRequestCreateComponent},
+  { path: 'datasetRequests', component: DatasetRequestListComponent},
+  { path: 'datasetRequests/:id', component: DatasetRequestDetailComponent},
   { path: 'DatasetRequest/:id/delete', component: DatasetRequestDeleteComponent},
   { path: 'DatasetRequest/:id/edit', component: DatasetRequestEditComponent},
 ];
